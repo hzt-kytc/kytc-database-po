@@ -23,6 +23,7 @@ public class ColumnDTO {
 	private String privileges;
 	private String columnComment;
 	private String javaName;
+	private String showComment;
 	public String getTableCatalog() {
 		return tableCatalog;
 	}
@@ -149,6 +150,12 @@ public class ColumnDTO {
 	public void setJavaName(String javaName) {
 		this.javaName = javaName;
 	}
+	public String getShowComment() {
+		return showComment;
+	}
+	public void setShowComment(String showComment) {
+		this.showComment = showComment;
+	}
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
@@ -194,6 +201,8 @@ public class ColumnDTO {
 		builder.append(columnComment);
 		builder.append(", javaName=");
 		builder.append(javaName);
+		builder.append(", showComment=");
+		builder.append(showComment);
 		builder.append("]");
 		return builder.toString();
 	}
